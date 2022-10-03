@@ -6,7 +6,7 @@ pipeline {
 	  steps {
 	      sh 'echo this is ismaeel'
 	      sh 'ls -la'
-	      sh 'cat adserver-hosts.txt
+	      sh 'cat adserver-hosts.txt'
 		//echo "server Selected ${adservers}"
 	  }
 	}
