@@ -1,0 +1,41 @@
+---
+all:
+  children:
+    adserver:
+      hosts:
+        adserver-prod-1:
+          ansible_ssh_host: 35.174.152.25
+        adserver-prod-2:
+          ansible_ssh_host: 3.232.185.156
+        adserver-prod-01:
+          ansible_ssh_host: 10.0.3.108
+        adserver-prod-02:
+          ansible_ssh_host: 10.0.3.196
+        adserver-prod-03:
+          ansible_ssh_host: 10.0.3.94
+        adserver-prod-04:
+          ansible_ssh_host: 10.0.3.76
+        adserver-prod-05:
+          ansible_ssh_host: 10.0.3.231
+        adserver-prod-06:
+          ansible_ssh_host: 10.0.3.61
+        adserver-prod-07:
+          ansible_ssh_host: 10.0.3.28
+        adserver-prod-08:
+          ansible_ssh_host: 10.0.3.117
+        adserver-stage:
+          ansible_ssh_host: 35.174.161.200
+        adserver-stage-01:
+          ansible_ssh_host: 10.0.3.198
+    jenkins:
+      hosts:
+        jenkins-adserver.dev.zypmedia.com:
+          ansible_ssh_host: 34.226.17.98
+    docker_hosts:
+      children:
+        adserver:
+        jenkins:
+  vars:
+    ansible_connection: ssh
+    ansible_ssh_user: "{{ lookup('env', 'USER') }}"
+    environment: adserver
