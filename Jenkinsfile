@@ -4,7 +4,7 @@ pipeline {
   stages {
 	stage('Demo Active Choices Parameter') {
 	  steps {
-	      sh 'cat filePat'
+	      sh 'cat this is ismaeel'
 		//echo "server Selected ${adservers}"
 	  }
 	}
