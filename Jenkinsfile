@@ -4,7 +4,7 @@ pipeline {
   stages {
 	stage('Demo Active Choices Parameter') {
 	  steps {
-	      cat adserver-hosts.yaml
+	      cat params.yaml
 		//echo "server Selected ${adservers}"
 	  }
 	}
